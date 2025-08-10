@@ -5,6 +5,7 @@ public class MainClass {
   public static void main(String[] args) {
 
 
+    try {
       Scanner scanner = new Scanner(System.in);
 
       int a, b, r;
@@ -12,11 +13,13 @@ public class MainClass {
       a = scanner.nextInt();
       System.out.println("Digite b");
       b = scanner.nextInt();
-      r = a/b;
+      r = a / b;
       System.out.println("Valor de r = " + r);
 
       scanner.close();
-
+    } catch (Exception e){
+      System.out.println("Erro!");
+    }
 
   }
 
