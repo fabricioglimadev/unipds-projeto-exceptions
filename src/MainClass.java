@@ -4,8 +4,8 @@ import java.util.Scanner;
 public class MainClass {
 
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    try {
+
+    try (Scanner scanner = new Scanner(System.in)) {
       int a, b, r;
       System.out.println("Digite a");
       a = scanner.nextInt();
@@ -19,10 +19,12 @@ public class MainClass {
       System.out.println("Erro - Voce deveria digitar numeros inteiros!");
     } catch (Exception e) {
       System.out.println("Erro!");
-    } finally {
-      scanner.close();
     }
 
   }
 
 }
+
+/*
+* Como a classe Scanner implementa a interface Closeable não é necessário adicionar finally, try-with-resource
+* */
