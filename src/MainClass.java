@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class MainClass {
+
+  public static void main(String[] args) {
+
+
+      Scanner scanner = new Scanner(System.in);
+
+      int a, b, r;
+      System.out.println("Digite a");
+      a = scanner.nextInt();
+      System.out.println("Digite b");
+      b = scanner.nextInt();
+      r = a/b;
+      System.out.println("Valor de r = " + r);
+
+      scanner.close();
+
+
+  }
+
+}
