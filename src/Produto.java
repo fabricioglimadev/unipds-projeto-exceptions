@@ -12,7 +12,7 @@ public class Produto {
   public void setId(int id) {
 
     if(id <= 0){
-      throw new IllegalArgumentException("ID nao pode ser menor ou igual a zero");
+      throw new MyException("ID nao pode ser menor ou igual a zero");
     }
 
     this.id = id;
@@ -25,7 +25,7 @@ public class Produto {
   public void setNome(String nome) {
 
     if(nome == null || nome.isEmpty()){
-      throw new IllegalArgumentException("Nome nao pode ser nulo ou vazio");
+      throw new MyException("Nome nao pode ser nulo ou vazio");
     }
 
     this.nome = nome;
