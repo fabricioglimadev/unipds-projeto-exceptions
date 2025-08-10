@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MainClass {
@@ -17,9 +18,14 @@ public class MainClass {
       System.out.println("Valor de r = " + r);
 
       scanner.close();
-    } catch (ArithmeticException e){
+    }
+    catch (ArithmeticException e){
       System.out.println("Erro - Divisao por zero!");
-    } catch (Exception e){
+    }
+    catch (InputMismatchException e){
+      System.out.println("Erro - Voce deveria digitar numeros inteiros!");
+    }
+    catch (Exception e){
       System.out.println("Erro!");
     }
 
