@@ -5,6 +5,13 @@ public class MainClass {
 
   public static void main(String[] args) {
 
+    Produto p = new Produto();
+    p.setId(0);
+    p.setNome(null);
+    p.setPreco(10);
+    System.out.println(p);
+
+    /*
     try (Scanner scanner = new Scanner(System.in)) {
       int a, b, r;
       System.out.println("Digite a");
@@ -21,6 +28,7 @@ public class MainClass {
       System.out.println(e.getClass().getName());//Nome da classe da Exception
       System.out.println("Erro!");
     }
+     */
 
   }
 
