@@ -9,7 +9,7 @@ public class MainClass {
       p.setPreco(10);
       System.out.println(p);
     } catch (MyException e) {
-      throw new RuntimeException(e);
+      System.out.println("Erro = " + e.getMessage());
     }
 
     /*
