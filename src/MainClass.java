@@ -8,16 +8,17 @@ public class MainClass {
     try (Scanner scanner = new Scanner(System.in)) {
       int a, b, r;
       System.out.println("Digite a");
-      a = scanner.nextInt();
+      a = Integer.parseInt(scanner.nextLine());
       System.out.println("Digite b");
       b = scanner.nextInt();
       r = a / b;
       System.out.println("Valor de r = " + r);
     } catch (ArithmeticException e) {
       System.out.println("Erro - Divisao por zero!");
-    } catch (InputMismatchException e) {
+    } catch (InputMismatchException | NumberFormatException e) { //Agrupa Exceptions
       System.out.println("Erro - Voce deveria digitar numeros inteiros!");
     } catch (Exception e) {
+      System.out.println(e.getClass().getName());//Nome da classe da Exception
       System.out.println("Erro!");
     }
 
