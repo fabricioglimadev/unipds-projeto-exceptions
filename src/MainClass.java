@@ -17,6 +17,8 @@ public class MainClass {
       System.out.println("Valor de r = " + r);
 
       scanner.close();
+    } catch (ArithmeticException e){
+      System.out.println("Erro - Divisao por zero!");
     } catch (Exception e){
       System.out.println("Erro!");
     }
