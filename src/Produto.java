@@ -9,7 +9,7 @@ public class Produto {
     return id;
   }
 
-  public void setId(int id) {
+  public void setId(int id) throws MyException{
 
     if(id <= 0){
       throw new MyException("ID nao pode ser menor ou igual a zero");
@@ -22,9 +22,9 @@ public class Produto {
     return nome;
   }
 
-  public void setNome(String nome) {
+  public void setNome(String nome) throws MyException {
 
-    if(nome == null || nome.isEmpty()){
+    if(nome == null || nome.isEmpty()) {
       throw new MyException("Nome nao pode ser nulo ou vazio");
     }
 

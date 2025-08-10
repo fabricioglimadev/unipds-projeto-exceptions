@@ -1,15 +1,16 @@
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 public class MainClass {
 
   public static void main(String[] args) {
 
     Produto p = new Produto();
-    p.setId(0);
-    p.setNome(null);
-    p.setPreco(10);
-    System.out.println(p);
+    try {
+      p.setId(0);
+      p.setNome(null);
+      p.setPreco(10);
+      System.out.println(p);
+    } catch (MyException e) {
+      throw new RuntimeException(e);
+    }
 
     /*
     try (Scanner scanner = new Scanner(System.in)) {
